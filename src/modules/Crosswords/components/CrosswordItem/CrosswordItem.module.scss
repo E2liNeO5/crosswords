@@ -1,0 +1,72 @@
+.crossword_item_container {
+  --easyColor: #2df74e;
+  --middleColor: #e2f345;
+  --hardColor: #f39a26;
+  --veryHardColor: #da1a1a;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 275px;
+  padding: 1em;
+  gap: 10px;
+  background-color: var(--whiteColor);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 5px solid transparent;
+  transition: box-shadow .2s;
+  cursor: pointer;
+
+  &.easy {
+    border-bottom-color: var(--easyColor);
+
+    &:hover {
+      box-shadow: 0 0 10px 2px var(--easyColor);
+    }
+  }
+
+  &.middle {
+    border-bottom-color: var(--middleColor);
+    &:hover {
+      box-shadow: 0 0 10px 2px var(--middleColor);
+    }
+  }
+
+  &.hard {
+    border-bottom-color: var(--hardColor);
+    &:hover {
+      box-shadow: 0 0 10px 2px var(--hardColor);
+    }
+  }
+
+  &.very_hard {
+    border-bottom-color: var(--veryHardColor);
+    &:hover {
+      box-shadow: 0 0 10px 2px var(--veryHardColor);
+    }
+  }
+
+  .difficulty {
+    align-self: center;
+    background-color: var(--whiteColorDark);
+    padding: 1em;
+    clip-path: polygon(0 10px, 0 100%, calc(100% - 10px) 100%, 100% calc(100% - 10px), 100% 0, 10px 0);
+    
+    .easy {
+      color: var(--easyColor);
+    }
+  
+    .middle {
+      color: var(--middleColor);
+    }
+  
+    .hard {
+      color: var(--hardColor);
+    }
+  
+    .very_hard {
+      color: var(--veryHardColor);
+    }
+  }
+}

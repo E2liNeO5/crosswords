@@ -1,0 +1,60 @@
+.side_bar_container {
+  position: absolute;
+  width: 20%;
+  padding: 1em;
+  top: 10%;
+  left: 0;
+  background-color: var(--redColorDark);
+  clip-path: polygon(0 0, calc(100% + 50px) 0, calc(100% + 50px) calc(80% - 25px), calc(100% - 25px) 100%, 0 100%);
+  transform: translateX(-100%);
+  transition: transform .4s;
+  z-index: 9;
+
+  &.open {
+    transform: translateX(0);
+
+    .menu_toggle {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  .menu_toggle {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--redColorDark);
+    padding: 2px;
+    color: #fff;
+    transition:  background-color .2s, transform .4s;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: var(--redColor);
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .link {
+      text-decoration: none;
+      color: #fff;
+      padding: .5em 1em;
+      margin-bottom: 1em;
+      background-color: var(--redColor);
+      clip-path: polygon(10px 0, 0 10px, 0 100%, calc(100% - 10px) 100%, 100% calc(100% - 10px), 100% 0);
+      transition: background-color .2s;
+
+      &:hover,
+      &.selected {
+        background-color: #fff;
+        color: var(--redColor)
+      }
+    }
+  }
+}
+
