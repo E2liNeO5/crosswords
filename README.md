@@ -1,4 +1,4 @@
-# Forum
+# Crosswords
 Crosswords app on react
 ## Start
 `npm install` - for install dependepcies
