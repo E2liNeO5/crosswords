@@ -3,3 +3,8 @@ export type TDifficulty = {
   name: string
   classValue: string
 }
+
+export type TLink = {
+  to: string
+  title: string
+}

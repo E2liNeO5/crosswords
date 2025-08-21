@@ -1,4 +1,4 @@
-import { TDifficulty } from "./types";
+import { TDifficulty, TLink } from "./types";
 
 export const DIFFICULTIES: TDifficulty[] = [
   {
@@ -20,5 +20,12 @@ export const DIFFICULTIES: TDifficulty[] = [
     id: 4,
     name: 'Очень тяжело',
     classValue: 'very_hard'
+  }
+]
+
+export const USER_LINKS: TLink[] = [
+  {
+    to:'/',
+    title: 'Главная'
   }
 ]

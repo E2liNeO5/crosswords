@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { addClass } from '../../../../core/utils'
+import { addClass } from '../../../../utils'
 import styles from './CrosswordItem.module.scss'
 import { DIFFICULTIES } from '../../../../constants'
 
