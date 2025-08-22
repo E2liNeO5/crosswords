@@ -29,3 +29,5 @@ export const USER_LINKS: TLink[] = [
     title: 'Главная'
   }
 ]
+
+export const TOAST_DISAPPEAR = 3000

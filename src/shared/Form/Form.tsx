@@ -5,11 +5,12 @@ import { addClass } from '../../utils'
 type Props = {
   buttonText?: string
   formTitle?: string
+  onSubmit: () => void
 }
 
-const Form = ({ children, buttonText, formTitle }: Props & PropsWithChildren) => {
+const Form = ({ children, buttonText, formTitle, onSubmit }: Props & PropsWithChildren) => {
   return (
-    <div className={styles.from_wrapper}>
+    <div className={styles.from_wrapper} onSubmit={onSubmit}>
       <form className={styles.form}>
         <div className={styles.form_title}>{ formTitle }</div>
         { children }

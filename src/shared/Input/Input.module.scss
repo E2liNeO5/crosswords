@@ -28,6 +28,8 @@
     }
 
     .input_container {
+      display: flex;
+      align-items: center;
       width: 100%;
       padding: 1em;
 
@@ -42,6 +44,14 @@
 
         &:focus {
           border-bottom-color: var(--redColor);
+        }
+      }
+
+      .letter_counter {
+        margin-left: 10px;
+
+        &.red {
+          color: var(--redColor);
         }
       }
     }
